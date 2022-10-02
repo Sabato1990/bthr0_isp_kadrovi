@@ -1,0 +1,14 @@
+{
+  "role": {
+    "name": "DROP_TABLE",
+    "object_privileges": [
+      {
+        "name": "COM_ISP_ZAPOSLENIE_INPUT",
+        "type": "TABLE",
+        "privileges": [
+          "DELETE"
+        ]
+      }
+    ]
+  }
+}
