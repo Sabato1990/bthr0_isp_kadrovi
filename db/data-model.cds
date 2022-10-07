@@ -259,6 +259,7 @@ entity TabLokacija {
     key SifLokacija         : Integer;
     //key SifOrganizacioniDeo : Integer;
         VaziOD              : String(11);
+        VaziDO              : String(11);
         NazivObjekta        : String(50);
         Mesto               : String(100);
         Opstina             : String(50);
@@ -268,7 +269,6 @@ entity TabLokacija {
         PodtipNekretnine    : String(50);
         Company             : String(5);
         Operation_type      : String(3);
-        VaziDO           : String(11);
 }
 
 entity TabVezaLokacijaOD {
@@ -282,10 +282,11 @@ entity TabVezaLokacijaOD {
 }
 
 entity TabMapping { // tabella per la mappatura delle chiavi di EC con quelle di Kadrovi
-    key EC_Key_value            : Integer;
-        EC_Key_description      : String(256);
+    key EC_Key_value1            : String(50);
+    key EC_Key_value2            : String(50);
+    key EC_Key_value3            : String(50);
     key Kadrovi_key_value       : Integer;
         Kadrovi_key_description : String(256);
         Source_generator        : String(1);
-        Operation_type          : String(3);
+        //Operation_type          : String(3);
 }
