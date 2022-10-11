@@ -53,5 +53,5 @@ resources:
       service-plan: application
       path: ./xs-security.json
       config:
-        xsappname: ISP_Kadrovi-${org}-${space}
+        xsappname: ISP_Kadrovi-${space}
         tenant-mode: dedicated
