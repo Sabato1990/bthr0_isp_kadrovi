@@ -243,6 +243,12 @@ entity TabOrganizacioniDeo {
         SifPozicija         : Integer; //aggiungi in analisi
     key Company             : String(5);
         Operation_type      : String(3);
+        VaziOD              : String(11); //forse van tolte
+        VaziDO              : String(11);
+        SifraSektor         : String(11);
+        SifraOdeljenje      : String(11);
+        SifraSluzba         : String(11);
+        SifraOdsek          : String(11);
 }
 
 entity TabPozicija {
