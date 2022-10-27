@@ -225,6 +225,8 @@ entity tabRadnoMesto {
         RadUSmenama            : String(1); //String(1);
     key Company                : String(5);
         Operation_type         : String(3);
+    key Start_Date_SF          : Date;
+
 }
 
 entity TabOrganizacioniDeo {
@@ -249,6 +251,8 @@ entity TabOrganizacioniDeo {
         SifraOdeljenje      : String(11);
         SifraSluzba         : String(11);
         SifraOdsek          : String(11);
+    key Start_Date_SF       : Date;
+
 }
 
 entity TabPozicija {
@@ -259,6 +263,8 @@ entity TabPozicija {
         VaziDo              : String(11); //forse van tolte
     key Company             : String(5);
         Operation_type      : String(3);
+    key Start_Date_SF       : Date;
+
 }
 
 entity TabLokacija {
@@ -275,6 +281,7 @@ entity TabLokacija {
         PodtipNekretnine : String(50);
     key Company          : String(5);
         Operation_type   : String(3);
+    key Start_Date_SF    : Date;
 }
 
 entity TabVezaLokacijaOD {
@@ -285,6 +292,8 @@ entity TabVezaLokacijaOD {
         VaziDo              : String(11);
     key Company             : String(5);
         Operation_type      : String(3);
+    key Start_Date_SF       : Date;
+
 }
 
 entity TabMapping { // tabella per la mappatura delle chiavi di EC con quelle di Kadrovi
