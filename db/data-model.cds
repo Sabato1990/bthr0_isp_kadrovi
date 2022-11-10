@@ -47,49 +47,49 @@ entity TabPozicija_INPUT {
 
 entity TabRadnik { //Tabella PerPersonal
     key SifRadnik            : Integer;
-        SifOpstinaRodjenja   : String(5);
+        SifOpstinaRodjenja   : String(255);
         SifNacionalnost      : Integer;
         SifDrzavljanstvo     : Integer;
-        Ime                  : String(20);
-        Prezime              : String(50);
-        ImeRoditelja         : String(20);
+        Ime                  : String(255);
+        Prezime              : String(255);
+        ImeRoditelja         : String(255);
         Pol                  : String(1);
-        JMBG                 : String(13);
-        Mesto                : String(50);
-        UlicaIBroj           : String(50);
-        PostBroj             : String(6);
-        DatumRodjenja        : String(11);
-        MestoRodjenja        : String(50);
+        JMBG                 : String(255);
+        Mesto                : String(255);
+        UlicaIBroj           : String(255);
+        PostBroj             : String(255);
+        DatumRodjenja        : String(255);
+        MestoRodjenja        : String(255);
         SifDrzavaRodjenja    : Integer;
-        DatumUpisa           : String(11);
-        DevojackoPrezime     : String(50);
+        DatumUpisa           : String(255);
+        DevojackoPrezime     : String(255);
         BracniStatus         : Integer;
         Veroispovest         : Integer;
-        LKBroj               : String(10);
-        LKMesto              : String(50);
-        PasosBroj            : String(10);
-        PasosMesto           : String(50);
+        LKBroj               : String(255);
+        LKMesto              : String(255);
+        PasosBroj            : String(255);
+        PasosMesto           : String(255);
         Vozacka              : String(1);
-        TelKucni             : String(80);
-        TelMobilni           : String(80);
-        TelPosao             : String(80);
-        MobilniPriv          : String(80);
-        MailLicni1           : String(100);
-        MailLicni2           : String(100);
-        MailPoslovni         : String(80);
+        TelKucni             : String(255);
+        TelMobilni           : String(255);
+        TelPosao             : String(255);
+        MobilniPriv          : String(255);
+        MailLicni1           : String(255);
+        MailLicni2           : String(255);
+        MailPoslovni         : String(255);
         ZSSIF                : Integer;
         NKSIF                : Integer;
-        ZSIF                 : String(30);
+        ZSIF                 : String(255);
         MaticniBroj          : Integer;
-        PasosDo              : String(11);
+        PasosDo              : String(255);
         SifOpstinaStanovanja : Integer;
         SifPosta             : Integer;
         Invalidnost          : Integer;
-        InvalidnostOd        : String(11);
+        InvalidnostOd        : String(255);
         SamohraniRoditelj    : Integer;
         SifVerskiPraznik     : Integer;
-    key Company              : String(5);
-        Operation_type       : String(3);
+    key Company              : String(255);
+        Operation_type       : String(255);
 }
 
 entity TabZaposlenje { //Tabella informazioni sull'impiego
@@ -106,35 +106,35 @@ entity TabZaposlenje { //Tabella informazioni sull'impiego
         Mes                 : Integer;
         God                 : Integer;
         StartEnd            : String(1);
-    key Company             : String(5);
-        Operation_type      : String(3);
+    key Company             : String(255);
+        Operation_type      : String(255);
 }
 
 entity TabAngazovaniPoUgovoru { //TABELLA PER LAVORATORI ESTERNI
     key SifAngazovaniPoUgovoru : Integer;
         SifOpstinaStanovanja   : Integer;
-        Ime                    : String(20);
-        Prezime                : String(50);
+        Ime                    : String(255);
+        Prezime                : String(255);
         Pol                    : String(1);
-        JMBG                   : String(13);
-        UlicaIBroj             : String(50);
-        PostBroj               : String(6);
-        Mesto                  : String(50);
+        JMBG                   : String(255);
+        UlicaIBroj             : String(255);
+        PostBroj               : String(255);
+        Mesto                  : String(255);
         DatumRodjenja          : String(11);
-        TelKucni               : String(80);
-        MobilniPriv            : String(80);
-        TelMobilni             : String(80);
-        TelPosao               : String(80);
-        MailLicni1             : String(30);
-        MailLicni2             : String(30);
-        LKBroj                 : String(10);
-        WINUSER                : String(30);
+        TelKucni               : String(255);
+        MobilniPriv            : String(255);
+        TelMobilni             : String(255);
+        TelPosao               : String(255);
+        MailLicni1             : String(255);
+        MailLicni2             : String(255);
+        LKBroj                 : String(255);
+        WINUSER                : String(255);
         Napomena               : String(400);
-        StatusAngazovanog      : String(100);
+        StatusAngazovanog      : String(255);
         SifPosta               : Integer;
         DatumUpisa             : String(11);
-    key Company                : String(5);
-        Operation_type         : String(3);
+    key Company                : String(255);
+        Operation_type         : String(255);
 }
 
 entity TabUgovor { //Tabella informazioni sull'impiego dei lavoratori esterni
@@ -147,23 +147,23 @@ entity TabUgovor { //Tabella informazioni sull'impiego dei lavoratori esterni
         DatumUpisa             : String(11);
         SifOrganizacioniDeo    : Integer;
         NazivUgovora           : String(400);
-        BrojUgovora            : String(100);
-        UgovorBan              : String(100);
-    key Company                : String(5);
-        Operation_type         : String(3);
+        BrojUgovora            : String(255);
+        UgovorBan              : String(255);
+    key Company                : String(255);
+        Operation_type         : String(255);
 }
 
 entity TabIstorijaStaza {
     key SifRadnik      : Integer;
     key DatumOd        : String(11);
         DatumDo        : String(11);
-        Firma          : String(80);
-        Sediste        : String(200);
+        Firma          : String(255);
+        Sediste        : String(255);
         Godina         : Integer;
         Meseci         : Integer;
         Dana           : Integer;
-    key Company        : String(5);
-        Operation_type : String(3);
+    key Company        : String(255);
+        Operation_type : String(255);
 }
 
 entity TabRazniDogadjaji {
@@ -172,11 +172,11 @@ entity TabRazniDogadjaji {
     key DatumOd           : String(11);
         DatumIzvrsenja    : String(11);
         DatumIzricanja    : String(11);
-        Vrsta             : String(40);
+        Vrsta             : String(255);
         OpisDogadjaja     : String(400);
         DatumDo           : String(11);
-    key Company           : String(5);
-        Operation_type    : String(3);
+    key Company           : String(255);
+        Operation_type    : String(255);
 }
 
 entity TabBrojDokumenta {
@@ -184,81 +184,82 @@ entity TabBrojDokumenta {
         SifRadnik          : Integer;
         //key Datum              : String(11);
         SifTabela          : Integer;
-        Tabela             : String(50);
-        BrojDokumenta      : String(200);
+        Tabela             : String(255);
+        BrojDokumenta      : String(255);
         SifDokument        : Integer;
-        DokumentZaposlenje : String(100);
+        DokumentZaposlenje : String(255);
         //SifVrstaDokumenta  : String(100);
         //NazivDokumenta     : String(100); nome del documento
-    key Company            : String(5);
-        Operation_type     : String(3);
+    key Company            : String(255);
+        Operation_type     : String(255);
 }
 
 entity tabRodbina {
     key SifRodbina     : Integer;
         SifRadnik      : Integer;
-        Ime            : String(30);
-        Prezime        : String(30);
+        Ime            : String(255);
+        Prezime        : String(255);
         Pol            : String(1);
         SifSrodstvo    : Integer;
         DatumRodjenja  : String(11);
-        JMBGRodbina    : String(13);
-    key Company        : String(5);
-        Operation_type : String(3);
+        JMBGRodbina    : String(255);
+    key Company        : String(255);
+        Operation_type : String(255);
 }
 
 entity tabRadnoMesto {
     key SifRadnoMesto          : Integer;
         Naziv                  : String(255);
         NazivEngleski          : String(255);
-        SifraRadnogMesta       : String(20);
-        StrucnaSprema          : String(38);
-        RadnoIskustvo          : String(38);
-        PosebniUslovi          : String(16);
-        OpisPoslova            : String(16);
-        PosebneDuznosti        : String(38);
+        SifraRadnogMesta       : String(255);
+        StrucnaSprema          : String(255);
+        RadnoIskustvo          : String(255);
+        PosebniUslovi          : String(255);
+        OpisPoslova            : String(255);
+        PosebneDuznosti        : String(255);
         VaziOD                 : String(11); //forse van tolte
         VaziDO                 : String(11);
         Aktivno                : String(1);
         SifStepenStrucnaSprema : Integer;
         SifraPodgrupa          : Integer;
         RadUSmenama            : String(1); //String(1);
-    key Company                : String(5);
-        Operation_type         : String(3);
+    key Company                : String(255);
+        SifNivoRukovodjenja    : String(255); 
+        Operation_type         : String(255);
 }
 
 entity TabOrganizacioniDeo {
     key SifOrganizacioniDeo : Integer;
-        SifraPravilnik      : String(10);
-        SifraOJ             : String(10);
-        Oznaka              : String(12);
+        SifraPravilnik      : String(255);
+        SifraOJ             : String(255);
+        Oznaka              : String(255);
         Naziv               : String(300); //aggiungi in analisi
-        NazivEngleski       : String(100);
+        NazivEngleski       : String(255);
         Napomena            : String(400);
         Aktivan             : Boolean; //aggiungi in analisi
         NadredjeniOD        : Integer;
-        Poreklo             : String(3); //aggiungi in analisi
+        Poreklo             : String(255); //aggiungi in analisi
         RadUSmenama         : Boolean;
         SifRadnoMesto       : Integer; //aggiungi in analisi
         SifPozicija         : Integer; //aggiungi in analisi
-    key Company             : String(5);
-        Operation_type      : String(3);
+    key Company             : String(255);
+        Operation_type      : String(255);
         VaziOD              : String(11); //forse van tolte
         VaziDO              : String(11);
-        SifraSektor         : String(11);
-        SifraOdeljenje      : String(11);
-        SifraSluzba         : String(11);
-        SifraOdsek          : String(11);
+        SifraSektor         : String(255);
+        SifraOdeljenje      : String(255);
+        SifraSluzba         : String(255);
+        SifraOdsek          : String(255);
 }
 
 entity TabPozicija {
     key SifPozicija         : Integer;
         SifOrganizacioniDeo : Integer;
-        SifRadnoMesto       : String(20);
+        SifRadnoMesto       : String(255);
         VaziOd              : String(11); //forse van tolte
         VaziDo              : String(11); //forse van tolte
-    key Company             : String(5);
-        Operation_type      : String(3);
+    key Company             : String(255);
+        Operation_type      : String(255);
 }
 
 entity TabLokacija {
@@ -266,15 +267,15 @@ entity TabLokacija {
         //key SifOrganizacioniDeo : Integer;
         VaziOD           : String(11);
         VaziDO           : String(11);
-        NazivObjekta     : String(50);
-        Mesto            : String(100);
-        Opstina          : String(50);
+        NazivObjekta     : String(255);
+        Mesto            : String(255);
+        Opstina          : String(255);
         Adresa           : String(300);
-        PTT              : String(20);
-        TipNekretnine    : String(50);
-        PodtipNekretnine : String(50);
-    key Company          : String(5);
-        Operation_type   : String(3);
+        PTT              : String(255);
+        TipNekretnine    : String(255);
+        PodtipNekretnine : String(255);
+    key Company          : String(255);
+        Operation_type   : String(255);
 }
 
 entity TabVezaLokacijaOD {
@@ -283,8 +284,8 @@ entity TabVezaLokacijaOD {
         SifOrganizacioniDeo : Integer;
         VaziOd              : String(11);
         VaziDo              : String(11);
-    key Company             : String(5);
-        Operation_type      : String(3);
+    key Company             : String(255);
+        Operation_type      : String(255);
 }
 
 entity TabMapping { // tabella per la mappatura delle chiavi di EC con quelle di Kadrovi
