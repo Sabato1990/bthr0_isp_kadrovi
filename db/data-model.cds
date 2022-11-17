@@ -83,7 +83,6 @@ entity TabRadnik { //Tabella PerPersonal
         MaticniBroj          : Integer;
         PasosDo              : String(255);
         SifOpstinaStanovanja : Integer;
-        SifPosta             : Integer;
         Invalidnost          : Integer;
         InvalidnostOd        : String(255);
         SamohraniRoditelj    : Integer;
@@ -93,9 +92,9 @@ entity TabRadnik { //Tabella PerPersonal
 }
 
 entity TabZaposlenje { //Tabella informazioni sull'impiego
-    key SifRadnik           : Integer;
-    key DatumOd             : String(11);
-        //key SifZaposlen         : Integer;
+     SifRadnik           : Integer;
+     DatumOd             : String(11);
+    key SifZaposlen         : Integer;
         SifRadnoMesto       : Integer;
         SifOrganizacioniDeo : Integer;
         SifPozicija         : Integer;
@@ -108,6 +107,9 @@ entity TabZaposlenje { //Tabella informazioni sull'impiego
         StartEnd            : String(1);
     key Company             : String(255);
         Operation_type      : String(255);
+        AKtivanStatus       : Integer;
+        DokumentZaposlenje  : String(100) not null;
+
 }
 
 entity TabAngazovaniPoUgovoru { //TABELLA PER LAVORATORI ESTERNI
@@ -349,7 +351,6 @@ entity TabRadnik_ARCH { //Tabella PerPersonal
         MaticniBroj          : Integer;
         PasosDo              : String(11);
         SifOpstinaStanovanja : Integer;
-        SifPosta             : Integer;
         Invalidnost          : Integer;
         InvalidnostOd        : String(11);
         SamohraniRoditelj    : Integer;
@@ -363,7 +364,7 @@ entity TabZaposlenje_ARCH { //Tabella informazioni sull'impiego
         creationDate        : Date;
         SifRadnik           : Integer;
         DatumOd             : String(11);
-        //key SifZaposlen         : Integer;
+        SifZaposlen         : Integer;
         SifRadnoMesto       : Integer;
         SifOrganizacioniDeo : Integer;
         SifPozicija         : Integer;
@@ -374,8 +375,10 @@ entity TabZaposlenje_ARCH { //Tabella informazioni sull'impiego
         Mes                 : Integer;
         God                 : Integer;
         StartEnd            : String(1);
-        Company             : String(5);
-        Operation_type      : String(3);
+        Company             : String(255);
+        Operation_type      : String(255);
+        AKtivanStatus       : Integer;
+        DokumentZaposlenje  : String(100)
 }
 
 entity TabAngazovaniPoUgovoru_ARCH { //TABELLA PER LAVORATORI ESTERNI
