@@ -140,10 +140,10 @@ entity TabAngazovaniPoUgovoru { //TABELLA PER LAVORATORI ESTERNI
 }
 
 entity TabUgovor { //Tabella informazioni sull'impiego dei lavoratori esterni
-    key SifAngazovaniPoUgovoru : Integer;
+     SifAngazovaniPoUgovoru : Integer;
         NacinSklapanja         : String(400);
         VrstaUgovora           : String(400);
-    key DatumOd                : String(11);
+     DatumOd                : String(11);
         DatumDo                : String(11);
         OpisPoslova            : String(400);
         DatumUpisa             : String(11);
@@ -153,11 +153,13 @@ entity TabUgovor { //Tabella informazioni sull'impiego dei lavoratori esterni
         UgovorBan              : String(255);
     key Company                : String(255);
         Operation_type         : String(255);
+        key SifUgovor: Integer;
+         Aktivan             : Boolean;
 }
 
 entity TabIstorijaStaza {
-    key SifRadnik      : Integer;
-    key DatumOd        : String(11);
+     SifRadnik      : Integer;
+     DatumOd        : String(11);
         DatumDo        : String(11);
         Firma          : String(255);
         Sediste        : String(255);
@@ -166,12 +168,13 @@ entity TabIstorijaStaza {
         Dana           : Integer;
     key Company        : String(255);
         Operation_type : String(255);
+          key SifIstorijaStaza : Integer;
 }
 
 entity TabRazniDogadjaji {
-    key SifRadnik         : Integer;
-    key SifVrstaDogadjaja : Integer;
-    key DatumOd           : String(11);
+     SifRadnik         : Integer;
+     SifVrstaDogadjaja : Integer;
+     DatumOd           : String(11);
         DatumIzvrsenja    : String(11);
         DatumIzricanja    : String(11);
         Vrsta             : String(255);
@@ -179,6 +182,7 @@ entity TabRazniDogadjaji {
         DatumDo           : String(11);
     key Company           : String(255);
         Operation_type    : String(255);
+         key SifRazniDogadjaji : Integer;
 }
 
 entity TabBrojDokumenta {
@@ -426,6 +430,8 @@ entity TabUgovor_ARCH { //Tabella informazioni sull'impiego dei lavoratori ester
         UgovorBan              : String(100);
         Company                : String(5);
         Operation_type         : String(3);
+         SifUgovor: Integer;
+         Aktivan             : Boolean;
 }
 
 entity TabIstorijaStaza_ARCH {
@@ -441,6 +447,7 @@ entity TabIstorijaStaza_ARCH {
         Dana           : Integer;
         Company        : String(5);
         Operation_type : String(3);
+        SifIstorijaStaza : Integer;
 }
 
 entity TabRazniDogadjaji_ARCH {
@@ -456,6 +463,7 @@ entity TabRazniDogadjaji_ARCH {
         DatumDo           : String(11);
         Company           : String(5);
         Operation_type    : String(3);
+        SifRazniDogadjaji : Integer;
 }
 
 entity TabBrojDokumenta_ARCH {
