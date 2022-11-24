@@ -108,7 +108,7 @@ entity TabZaposlenje { //Tabella informazioni sull'impiego
     key Company             : String(255);
         Operation_type      : String(255);
         AKtivanStatus       : Integer;
-        DokumentZaposlenje  : String(100) not null;
+        DokumentZaposlenje  : String(100);
 
 }
 
@@ -154,7 +154,7 @@ entity TabUgovor { //Tabella informazioni sull'impiego dei lavoratori esterni
     key Company                : String(255);
         Operation_type         : String(255);
         key SifUgovor: Integer;
-         Aktivan             : Boolean;
+         Aktivan             : Integer;
 }
 
 entity TabIstorijaStaza {
@@ -431,7 +431,7 @@ entity TabUgovor_ARCH { //Tabella informazioni sull'impiego dei lavoratori ester
         Company                : String(5);
         Operation_type         : String(3);
          SifUgovor: Integer;
-         Aktivan             : Boolean;
+         Aktivan             : Integer;
 }
 
 entity TabIstorijaStaza_ARCH {
