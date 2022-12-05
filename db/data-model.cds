@@ -1,5 +1,7 @@
 namespace com.isp;
 
+using {managed} from '@sap/cds/common';
+
 entity TabZaposlenJe_INPUT {
     key SifZaposlen : Integer;
     key SifRadnik   : Integer;
@@ -90,6 +92,7 @@ entity TabRadnik { //Tabella PerPersonal
     key Company              : String(255);
     key Operation_type       : String(255);
         sent                 : String(1);
+         Start_Date_SF        : Date;
 }
 
 entity TabZaposlenje { //Tabella informazioni sull'impiego
@@ -341,6 +344,7 @@ entity Kadrovi_keys_Sequence {
         lastAvailableID : Integer;
 }
 
+
 entity TabRadnik_ARCH { //Tabella PerPersonal
     key uuid                 : UUID;
         creationDate         : Date;
@@ -387,6 +391,7 @@ entity TabRadnik_ARCH { //Tabella PerPersonal
         SifVerskiPraznik     : Integer;
     key Company              : String(5);
         Operation_type       : String(3);
+        Start_Date_SF        : Date;
 }
 
 entity TabZaposlenje_ARCH { //Tabella informazioni sull'impiego
@@ -394,7 +399,7 @@ entity TabZaposlenje_ARCH { //Tabella informazioni sull'impiego
         creationDate        : Date;
         SifRadnik           : Integer;
         DatumOd             : String(11);
-        SifZaposlen         : Integer;
+        SifZaposlen         : UUID;
         SifRadnoMesto       : Integer;
         SifOrganizacioniDeo : Integer;
         SifPozicija         : Integer;
@@ -408,7 +413,8 @@ entity TabZaposlenje_ARCH { //Tabella informazioni sull'impiego
         Company             : String(255);
         Operation_type      : String(255);
         AKtivanStatus       : Integer;
-        DokumentZaposlenje  : String(100)
+        DokumentZaposlenje  : String(100);
+        Start_Date_SF       : Date;
 }
 
 entity TabAngazovaniPoUgovoru_ARCH { //TABELLA PER LAVORATORI ESTERNI
@@ -438,6 +444,7 @@ entity TabAngazovaniPoUgovoru_ARCH { //TABELLA PER LAVORATORI ESTERNI
         DatumUpisa             : String(11);
         Company                : String(5);
         Operation_type         : String(3);
+        Start_Date_SF          : Date;
 }
 
 entity TabUgovor_ARCH { //Tabella informazioni sull'impiego dei lavoratori esterni
@@ -456,8 +463,9 @@ entity TabUgovor_ARCH { //Tabella informazioni sull'impiego dei lavoratori ester
         UgovorBan              : String(100);
         Company                : String(5);
         Operation_type         : String(3);
-        SifUgovor              : Integer;
+        SifUgovor              : UUID;
         Aktivan                : Integer;
+        Start_Date_SF          : Date;
 }
 
 entity TabIstorijaStaza_ARCH {
@@ -473,7 +481,8 @@ entity TabIstorijaStaza_ARCH {
         Dana             : Integer;
         Company          : String(5);
         Operation_type   : String(3);
-        SifIstorijaStaza : Integer;
+        SifIstorijaStaza : UUID;
+        Start_Date_SF    : Date;
 }
 
 entity TabRazniDogadjaji_ARCH {
@@ -489,7 +498,8 @@ entity TabRazniDogadjaji_ARCH {
         DatumDo           : String(11);
         Company           : String(5);
         Operation_type    : String(3);
-        SifRazniDogadjaji : Integer;
+        SifRazniDogadjaji : UUID;
+        Start_Date_SF     : Date;
 }
 
 entity TabBrojDokumenta_ARCH {
@@ -507,6 +517,7 @@ entity TabBrojDokumenta_ARCH {
         //NazivDokumenta     : String(100); nome del documento
         Company            : String(5);
         Operation_type     : String(3);
+        Start_Date_SF      : Date;
 }
 
 entity tabRodbina_ARCH {
@@ -522,6 +533,7 @@ entity tabRodbina_ARCH {
         JMBGRodbina    : String(13);
         Company        : String(5);
         Operation_type : String(3);
+        Start_Date_SF  : Date;
 }
 
 entity tabRadnoMesto_ARCH {
@@ -545,6 +557,7 @@ entity tabRadnoMesto_ARCH {
         Company                : String(5);
         Operation_type         : String(3);
         Start_Date_SF          : Date;
+
 
 }
 
