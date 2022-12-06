@@ -92,7 +92,7 @@ entity TabRadnik { //Tabella PerPersonal
     key Company              : String(255);
     key Operation_type       : String(255);
         sent                 : String(1);
-         Start_Date_SF        : Date;
+        Start_Date_SF        : Date;
 }
 
 entity TabZaposlenje { //Tabella informazioni sull'impiego
@@ -346,7 +346,7 @@ entity Kadrovi_keys_Sequence {
 
 
 entity TabRadnik_ARCH { //Tabella PerPersonal
-    key uuid                 : UUID;
+    key uuid                 : String(256);
         creationDate         : Date;
         SifRadnik            : Integer;
         SifOpstinaRodjenja   : String(5);
@@ -395,11 +395,11 @@ entity TabRadnik_ARCH { //Tabella PerPersonal
 }
 
 entity TabZaposlenje_ARCH { //Tabella informazioni sull'impiego
-    key uuid                : UUID;
+    key uuid                : String(256);
         creationDate        : Date;
         SifRadnik           : Integer;
         DatumOd             : String(11);
-        SifZaposlen         : UUID;
+        SifZaposlen         : String(256);
         SifRadnoMesto       : Integer;
         SifOrganizacioniDeo : Integer;
         SifPozicija         : Integer;
@@ -418,7 +418,7 @@ entity TabZaposlenje_ARCH { //Tabella informazioni sull'impiego
 }
 
 entity TabAngazovaniPoUgovoru_ARCH { //TABELLA PER LAVORATORI ESTERNI
-    key uuid                   : UUID;
+    key uuid                   : String(256);
         creationDate           : Date;
         SifAngazovaniPoUgovoru : Integer;
         SifOpstinaStanovanja   : Integer;
@@ -448,7 +448,7 @@ entity TabAngazovaniPoUgovoru_ARCH { //TABELLA PER LAVORATORI ESTERNI
 }
 
 entity TabUgovor_ARCH { //Tabella informazioni sull'impiego dei lavoratori esterni
-    key uuid                   : UUID;
+    key uuid                   : String(256);
         creationDate           : Date;
         SifAngazovaniPoUgovoru : Integer;
         NacinSklapanja         : String(400);
@@ -463,13 +463,13 @@ entity TabUgovor_ARCH { //Tabella informazioni sull'impiego dei lavoratori ester
         UgovorBan              : String(100);
         Company                : String(5);
         Operation_type         : String(3);
-        SifUgovor              : UUID;
+        SifUgovor              : String(256);
         Aktivan                : Integer;
         Start_Date_SF          : Date;
 }
 
 entity TabIstorijaStaza_ARCH {
-    key uuid             : UUID;
+    key uuid             : String(256);
         creationDate     : Date;
         SifRadnik        : Integer;
         DatumOd          : String(11);
@@ -481,12 +481,12 @@ entity TabIstorijaStaza_ARCH {
         Dana             : Integer;
         Company          : String(5);
         Operation_type   : String(3);
-        SifIstorijaStaza : UUID;
+        SifIstorijaStaza : String(256);
         Start_Date_SF    : Date;
 }
 
 entity TabRazniDogadjaji_ARCH {
-    key uuid              : UUID;
+    key uuid              : String(256);
         creationDate      : Date;
         SifRadnik         : Integer;
         SifVrstaDogadjaja : Integer;
@@ -498,12 +498,12 @@ entity TabRazniDogadjaji_ARCH {
         DatumDo           : String(11);
         Company           : String(5);
         Operation_type    : String(3);
-        SifRazniDogadjaji : UUID;
+        SifRazniDogadjaji : String(256);
         Start_Date_SF     : Date;
 }
 
 entity TabBrojDokumenta_ARCH {
-    key uuid               : UUID;
+    key uuid               : String(256);
         creationDate       : Date;
         SifBrojDokumenta   : Integer;
         SifRadnik          : Integer;
@@ -521,7 +521,7 @@ entity TabBrojDokumenta_ARCH {
 }
 
 entity tabRodbina_ARCH {
-    key uuid           : UUID;
+    key uuid           : String(256);
         creationDate   : Date;
         SifRodbina     : Integer;
         SifRadnik      : Integer;
@@ -537,7 +537,7 @@ entity tabRodbina_ARCH {
 }
 
 entity tabRadnoMesto_ARCH {
-    key uuid                   : UUID;
+    key uuid                   : String(256);
         creationDate           : Date;
         SifRadnoMesto          : Integer;
         Naziv                  : String(255);
@@ -562,7 +562,7 @@ entity tabRadnoMesto_ARCH {
 }
 
 entity TabOrganizacioniDeo_ARCH {
-    key uuid                : UUID;
+    key uuid                : String(256);
         creationDate        : Date;
         SifOrganizacioniDeo : Integer;
         SifraPravilnik      : String(10);
@@ -590,7 +590,7 @@ entity TabOrganizacioniDeo_ARCH {
 }
 
 entity TabPozicija_ARCH {
-    key uuid                : UUID;
+    key uuid                : String(256);
         creationDate        : Date;
         SifPozicija         : Integer;
         SifOrganizacioniDeo : Integer;
@@ -604,7 +604,7 @@ entity TabPozicija_ARCH {
 }
 
 entity TabLokacija_ARCH {
-    key uuid             : UUID;
+    key uuid             : String(256);
         creationDate     : Date;
         SifLokacija      : Integer;
         //key SifOrganizacioniDeo : Integer;
@@ -623,7 +623,7 @@ entity TabLokacija_ARCH {
 }
 
 entity TabVezaLokacijaOD_ACRH {
-    key uuid                : UUID;
+    key uuid                : String(256);
         creationDate        : Date;
         SifVezaLokacijaOd   : Integer;
         SifLokacija         : Integer;
