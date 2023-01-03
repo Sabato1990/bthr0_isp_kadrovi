@@ -92,7 +92,7 @@ entity TabRadnik { //Tabella PerPersonal
     key Company              : String(255);
     key Operation_type       : String(255);
         sent                 : String(1);
-        Start_Date_SF        : Date;
+    key    Start_Date_SF        : Date;
 }
 
 entity TabZaposlenje { //Tabella informazioni sull'impiego
@@ -102,7 +102,7 @@ entity TabZaposlenje { //Tabella informazioni sull'impiego
         SifOrganizacioniDeo : Integer;
         SifPozicija         : Integer;
         SifOsnovRada        : Integer;
-        SifStatusZaposlenja : Integer;
+        SifStatusZaposlenja : String(255cf l);
         DatumDo             : String(11);
         Dan                 : Integer;
         Mes                 : Integer;
@@ -145,6 +145,7 @@ entity TabAngazovaniPoUgovoru { //TABELLA PER LAVORATORI ESTERNI
     key Company                : String(255);
     key Operation_type         : String(255);
         sent                   : String(1);
+    key    Start_Date_SF        : Date;
 }
 
 entity TabUgovor { //Tabella informazioni sull'impiego dei lavoratori esterni
@@ -214,6 +215,7 @@ entity TabBrojDokumenta {
     key Operation_type     : String(255);
         Datum              : String(11);
         sent               : String(1);
+     key    Start_Date_SF        : Date;
 
 }
 
@@ -229,6 +231,7 @@ entity tabRodbina {
     key Company        : String(255);
     key Operation_type : String(255);
         sent           : String(1);
+         key    Start_Date_SF        : Date;
 
 }
 
@@ -404,7 +407,7 @@ entity TabZaposlenje_ARCH { //Tabella informazioni sull'impiego
         SifOrganizacioniDeo : Integer;
         SifPozicija         : Integer;
         SifOsnovRada        : Integer;
-        SifStatusZaposlenja : Integer;
+        SifStatusZaposlenja : String(255);
         DatumDo             : String(11);
         Dan                 : Integer;
         Mes                 : Integer;
