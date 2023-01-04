@@ -32,7 +32,7 @@ entity TabRazniDogadjaji_INPUT {
 }
 
 entity TabVezaLokacijaOD_INPUT {
-    key SifVezaLokacijaOd   : Integer;
+    key SifVezaLokacijaOd   : String(100);
         SifLokacija         : Integer;
         SifOrganizacioniDeo : Integer;
         VaziOd              : String(11);
@@ -102,7 +102,7 @@ entity TabZaposlenje { //Tabella informazioni sull'impiego
         SifOrganizacioniDeo : Integer;
         SifPozicija         : Integer;
         SifOsnovRada        : Integer;
-        SifStatusZaposlenja : String(255cf l);
+        SifStatusZaposlenja : String(255);
         DatumDo             : String(11);
         Dan                 : Integer;
         Mes                 : Integer;
@@ -327,7 +327,7 @@ entity TabVezaLokacijaOD {
     key Operation_type      : String(255);
     key Start_Date_SF       : Date;
         sent                : String(1);
-    key SifVezaLokacijaOd   : UUID;
+    key SifVezaLokacijaOd   : String(100);
 
 }
 
@@ -628,7 +628,7 @@ entity TabLokacija_ARCH {
 entity TabVezaLokacijaOD_ACRH {
     key uuid                : String(256);
         creationDate        : Date;
-        SifVezaLokacijaOd   : Integer;
+        SifVezaLokacijaOd   : String(100);
         SifLokacija         : Integer;
         SifOrganizacioniDeo : Integer;
         VaziOd              : String(11);
