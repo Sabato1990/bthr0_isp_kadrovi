@@ -215,7 +215,7 @@ entity TabBrojDokumenta {
     key Operation_type     : String(255);
         Datum              : String(11);
         sent               : String(1);
-     key    Start_Date_SF        : Date;
+     key    Start_Date_SF        : String(11);
 
 }
 
@@ -520,7 +520,7 @@ entity TabBrojDokumenta_ARCH {
         //NazivDokumenta     : String(100); nome del documento
         Company            : String(5);
         Operation_type     : String(3);
-        Start_Date_SF      : Date;
+        Start_Date_SF      : String(11);
 }
 
 entity tabRodbina_ARCH {
@@ -568,7 +568,7 @@ entity TabOrganizacioniDeo_ARCH {
     key uuid                : String(256);
         creationDate        : Date;
         SifOrganizacioniDeo : Integer;
-        SifraPravilnik      : String(10);
+        SifraPravilnik      : String(255);
         SifraOJ             : String(10);
         Oznaka              : String(12);
         Naziv               : String(300); //aggiungi in analisi
