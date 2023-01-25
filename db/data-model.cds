@@ -655,3 +655,12 @@ entity TabVezaLokacijaOD_ACRH {
         Start_Date_SF       : Date;
 
 }
+
+entity Kadrovi_Error {
+    Id             : String;
+    Message        : String;
+    TableName      : String;
+    Company        : String(5);
+    Operation_type : String(5);
+
+}
