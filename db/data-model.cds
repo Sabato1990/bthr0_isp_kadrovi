@@ -73,9 +73,13 @@ entity TabRadnik { //Tabella PerPersonal
         PasosMesto           : String(255);
         Vozacka              : String(1);
         TelKucni             : String(255);
+        TELKUCNI_COUNTRY     : String(10);
         TelMobilni           : String(255);
+        TELMOBILNI_COUNTRY   : String(10);
         TelPosao             : String(255);
+        TELPOSAO_COUNTRY     : String(10);
         MobilniPriv          : String(255);
+        MOBILNIPRIV_COUNTRY  : String(10);
         MailLicni1           : String(255);
         MailLicni2           : String(255);
         MailPoslovni         : String(255);
@@ -92,7 +96,8 @@ entity TabRadnik { //Tabella PerPersonal
     key Company              : String(255);
     key Operation_type       : String(255);
         sent                 : String(1);
-    key    Start_Date_SF        : Date;
+    key Start_Date_SF        : Date;
+
 }
 
 entity TabZaposlenje { //Tabella informazioni sull'impiego
@@ -131,9 +136,13 @@ entity TabAngazovaniPoUgovoru { //TABELLA PER LAVORATORI ESTERNI
         Mesto                  : String(255);
         DatumRodjenja          : String(11);
         TelKucni               : String(255);
+        TELKUCNI_COUNTRY       : String(10);
         MobilniPriv            : String(255);
+        MOBILNIPRIV_COUNTRY    : String(10);
         TelMobilni             : String(255);
+        TELMOBILNI_COUNTRY     : String(10);
         TelPosao               : String(255);
+        TELPOSAO_COUNTRY       : String(10);
         MailLicni1             : String(255);
         MailLicni2             : String(255);
         LKBroj                 : String(255);
@@ -145,7 +154,7 @@ entity TabAngazovaniPoUgovoru { //TABELLA PER LAVORATORI ESTERNI
     key Company                : String(255);
     key Operation_type         : String(255);
         sent                   : String(1);
-    key    Start_Date_SF        : Date;
+    key Start_Date_SF          : Date;
 }
 
 entity TabUgovor { //Tabella informazioni sull'impiego dei lavoratori esterni
@@ -215,7 +224,7 @@ entity TabBrojDokumenta {
     key Operation_type     : String(255);
         Datum              : String(11);
         sent               : String(1);
-     key    Start_Date_SF        : String(11);
+    key Start_Date_SF      : String(11);
 
 }
 
@@ -231,7 +240,7 @@ entity tabRodbina {
     key Company        : String(255);
     key Operation_type : String(255);
         sent           : String(1);
-         key    Start_Date_SF        : Date;
+    key Start_Date_SF  : Date;
 
 }
 
@@ -352,48 +361,52 @@ entity TabRadnik_ARCH { //Tabella PerPersonal
     key uuid                 : String(256);
         creationDate         : Date;
         SifRadnik            : Integer;
-        SifOpstinaRodjenja   : String(5);
+        SifOpstinaRodjenja   : String(255);
         SifNacionalnost      : Integer;
         SifDrzavljanstvo     : Integer;
-        Ime                  : String(20);
-        Prezime              : String(50);
-        ImeRoditelja         : String(20);
+        Ime                  : String(255);
+        Prezime              : String(255);
+        ImeRoditelja         : String(255);
         Pol                  : String(1);
-        JMBG                 : String(13);
-        Mesto                : String(50);
-        UlicaIBroj           : String(50);
-        PostBroj             : String(6);
-        DatumRodjenja        : String(11);
-        MestoRodjenja        : String(50);
+        JMBG                 : String(255);
+        Mesto                : String(255);
+        UlicaIBroj           : String(255);
+        PostBroj             : String(255);
+        DatumRodjenja        : String(255);
+        MestoRodjenja        : String(255);
         SifDrzavaRodjenja    : Integer;
-        DatumUpisa           : String(11);
-        DevojackoPrezime     : String(50);
+        DatumUpisa           : String(255);
+        DevojackoPrezime     : String(255);
         BracniStatus         : Integer;
         Veroispovest         : Integer;
-        LKBroj               : String(10);
-        LKMesto              : String(50);
-        PasosBroj            : String(10);
-        PasosMesto           : String(50);
+        LKBroj               : String(255);
+        LKMesto              : String(255);
+        PasosBroj            : String(255);
+        PasosMesto           : String(255);
         Vozacka              : String(1);
-        TelKucni             : String(80);
-        TelMobilni           : String(80);
-        TelPosao             : String(80);
-        MobilniPriv          : String(80);
-        MailLicni1           : String(100);
-        MailLicni2           : String(100);
-        MailPoslovni         : String(80);
+        TelKucni             : String(255);
+        TELKUCNI_COUNTRY     : String(10);
+        TelMobilni           : String(255);
+        TELMOBILNI_COUNTRY   : String(10);
+        TelPosao             : String(255);
+        TELPOSAO_COUNTRY     : String(10);
+        MobilniPriv          : String(255);
+        MOBILNIPRIV_COUNTRY  : String(10);
+        MailLicni1           : String(255);
+        MailLicni2           : String(255);
+        MailPoslovni         : String(255);
         ZSSIF                : Integer;
         NKSIF                : Integer;
-        ZSIF                 : String(30);
+        ZSIF                 : String(255);
         MaticniBroj          : Integer;
-        PasosDo              : String(11);
+        PasosDo              : String(255);
         SifOpstinaStanovanja : Integer;
         Invalidnost          : Integer;
-        InvalidnostOd        : String(11);
+        InvalidnostOd        : String(255);
         SamohraniRoditelj    : Integer;
         SifVerskiPraznik     : Integer;
-    key Company              : String(5);
-        Operation_type       : String(3);
+    key Company              : String(255);
+        Operation_type       : String(255);
         Start_Date_SF        : Date;
 }
 
@@ -425,28 +438,32 @@ entity TabAngazovaniPoUgovoru_ARCH { //TABELLA PER LAVORATORI ESTERNI
         creationDate           : Date;
         SifAngazovaniPoUgovoru : Integer;
         SifOpstinaStanovanja   : Integer;
-        Ime                    : String(20);
-        Prezime                : String(50);
+        Ime                    : String(255);
+        Prezime                : String(255);
         Pol                    : String(1);
-        JMBG                   : String(13);
-        UlicaIBroj             : String(50);
-        PostBroj               : String(6);
-        Mesto                  : String(50);
+        JMBG                   : String(255);
+        UlicaIBroj             : String(255);
+        PostBroj               : String(255);
+        Mesto                  : String(255);
         DatumRodjenja          : String(11);
-        TelKucni               : String(80);
-        MobilniPriv            : String(80);
-        TelMobilni             : String(80);
-        TelPosao               : String(80);
-        MailLicni1             : String(30);
-        MailLicni2             : String(30);
-        LKBroj                 : String(10);
-        WINUSER                : String(30);
+        TelKucni               : String(255);
+        TELKUCNI_COUNTRY       : String(10);
+        MobilniPriv            : String(255);
+        MOBILNIPRIV_COUNTRY    : String(10);
+        TelMobilni             : String(255);
+        TELMOBILNI_COUNTRY     : String(10);
+        TelPosao               : String(255);
+        TELPOSAO_COUNTRY       : String(10);
+        MailLicni1             : String(255);
+        MailLicni2             : String(255);
+        LKBroj                 : String(255);
+        WINUSER                : String(255);
         Napomena               : String(400);
-        StatusAngazovanog      : String(100);
+        StatusAngazovanog      : String(255);
         SifPosta               : Integer;
         DatumUpisa             : String(11);
-        Company                : String(5);
-        Operation_type         : String(3);
+        Company                : String(255);
+        Operation_type         : String(255);
         Start_Date_SF          : Date;
 }
 
