@@ -660,7 +660,8 @@ entity Kadrovi_Error {
     Id             : String;
     Message        : String;
     TableName      : String;
-    Company        : String(5);
-    Operation_type : String(5);
+    Company        : String(30);
+    Operation_type : String(30);
+    data: Timestamp;
 
 }
